@@ -1,0 +1,57 @@
+/*Estas son las animaciones en SASS*/
+$mapa:(
+    animacion1: 1.5s,
+    animacion2: 2s,
+    animacion3: 2.5s,
+    animacion4: 3s,
+    animacion5: 3.5s,
+);
+
+@each $nombre, $segundos in $mapa{
+    .#{$nombre}{
+        animation-name: iconoSecu;
+        animation-duration: $segundos;
+    }
+}
+
+.animacionLogo{
+    animation-name: iconoSecu2;
+    animation-duration: 3s;
+}
+.animacionIzqTex{
+    animation-name:animacionTexto;
+    animation-duration: 1.5s;
+}
+@keyframes iconoSecu {
+    from{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform:translateX(0px) ;
+        opacity: 100;
+    }
+}
+
+@keyframes iconoSecu2 {
+    from{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+
+    to{
+        transform:translateX(0px) ;
+        opacity: 100;
+    }
+}
+@keyframes animacionTexto{
+    from{
+        transform: translateX(-500px);
+        opacity: 0;
+    }
+    to{
+        transform: rotateX(0px);
+        opacity: 100;
+    }
+}

@@ -1,0 +1,170 @@
+/*SASS CON BOOTSTRAP*/
+
+//--------------------------------IMPORTACIONES
+@import "bootstrap/bootstrap.scss";
+@import"_animaciones";
+
+//--------------------------------VARIABLES
+$colorMenus:#B42128;
+$colorMenusHover:#77161b;
+$colorTextMenu:bisque;
+
+@mixin tamaño($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+*{
+    font-family: 'Comfortaa', cursive;
+    
+}
+.bannerToro{
+    width: 100vw;
+}
+.titulo{
+    font-family: 'Koulen', cursive;
+    background-color: $colorMenus;
+    margin-right: 100px;
+    margin-top: 10px; 
+}
+nav{
+    background-color: $colorMenus; 
+    .menuNav{
+        background-color: $colorMenus; 
+        .botonNavMenu{
+            text-decoration: none;
+            border-radius: 10px;
+        } 
+    }
+}
+
+
+.botonNavMenu:hover{
+    opacity: 0.5;
+    background-color: $colorMenusHover;
+    border-radius: 10px;
+    transform: scale(1.10);    
+}
+.textoMenu{
+    color:$colorTextMenu;
+}
+.contenedor{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+.mapaCole{
+    @include tamaño(100% , 90% );
+    border-radius: 20px;
+    border: 2px solid rgb(173, 173, 173);
+}
+
+.tarjeta{
+    margin: 5px;
+}
+.tarjeta:hover{
+    transition: 1s;
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+
+
+
+.textFooter{
+    padding-top: 20px;
+    .texto{
+        margin: 0;
+    }
+}
+
+    
+
+.imagenFooter{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.formulario{
+    margin:50px;
+}
+
+.filaVideoEscudo{
+    display: flex;
+    text-align: justify;
+    justify-items: center;
+    align-items: center;
+    .escudo{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        #colegio{
+            width: 50%;
+            height: 50%;
+        }
+    }
+    .video{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.parrafo{
+    text-align: justify;
+    padding: 40px;
+}
+
+
+.contenedorDire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .dire{
+        width: 70%;
+    }
+}
+.contenedorFirm{
+   @extend .contenedorDire;
+    padding-bottom: 10px;
+    .firm{
+        width: 50%;
+    }
+}
+
+.contenedorMain{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.filaDocente{
+    display: flex;
+    justify-content: center;
+}
+.logoDocente{
+    width: 25%;
+}
+.docente{
+    width: 100%;
+}
+.contenedorForm{
+    display: flex;
+    justify-content: center;
+}
+.formUsuario{
+    width: 50%;
+    margin: 90px;
+    margin-top: 10px;
+}
+.contFooter{
+    @extend .textoMenu;
+    @extend nav;
+    padding-top: 5px;
+    margin:0;
+    text-align: center;
+}
+
+
+
+
